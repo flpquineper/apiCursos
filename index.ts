@@ -9,8 +9,8 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-app.use("/curso", cursoRoutes)
-app.use("/aluno", alunoRoutes)
+app.use("/cursos", cursoRoutes)
+app.use("/alunos", alunoRoutes)
 app.use("/login", loginRoutes)
 
 app.get('/', (req, res) => {

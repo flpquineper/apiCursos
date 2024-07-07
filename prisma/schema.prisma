@@ -25,7 +25,7 @@ model Aluno {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt 
   log          Log[]
-  @@map("aluno")
+  @@map("alunos")
 }
 
 model Curso {
@@ -36,7 +36,7 @@ model Curso {
   nomeProfessor    String     @db.VarChar(60)
   deleted          Boolean    @default(false)
   alunos           Aluno[]
-  @@map("curso")
+  @@map("cursos")
 }
 model Log {
   id           Int      @id @default(autoincrement())

@@ -35,7 +35,7 @@ async function main() {
     }
   })
 
-  router.post("/", verificaToken, async (req: any, res) => {
+  router.post("/",  async (req: any, res) => {
     // dados que são fornecidos no corpo da requisição
     const { nome, tipo, valor, nomeProfessor } = req.body
   
