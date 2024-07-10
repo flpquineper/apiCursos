@@ -9,7 +9,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-app.use("/cursos", cursoRoutes)
+app.use("/curso", cursoRoutes)
 app.use("/alunos", alunoRoutes)
 app.use("/login", loginRoutes)
 

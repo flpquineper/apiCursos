@@ -1,6 +1,5 @@
 import { PrismaClient } from "@prisma/client"
 import { Router } from "express"
-import { verificaToken } from "../middlewares/verificaToken"
 
 const prisma = new PrismaClient()
 const router = Router()
@@ -56,7 +55,7 @@ async function main() {
       }
     })
 
-    router.delete("/:id", verificaToken, async (req, res) => {
+    router.delete("/:id",  async (req, res) => {
         const { id } = req.params
       
         try {
@@ -69,12 +68,12 @@ async function main() {
         }
     })
     
-    router.put("/:id", verificaToken, async (req, res) => {
+    router.put("/:id", async (req, res) => {
         const { id } = req.params
         const { nome, tipo, valor, nomeProfessor } = req.body
       
-        if (!nome || !tipo || !valor || !nomeProfessor) {
-          res.status(400).json({ erro: "Informe nome do curso, tipo, valor total e o nome do professor" })
+        if ( !valor ) {
+          res.status(400).json({ erro: "Informe o novo valor total do curso" })
           return
         }
       
