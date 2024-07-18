@@ -3,6 +3,11 @@
 ![docker-compose.yml](image-1.png)
 
 
+Integrantes do trabalho:
+- Luis Felipe Quineper Junior   
+- Lucas Lettnin
+- Pedro Martins Vergara
+
 ## Descrição
 Este Pull Request contém a configuração de Docker para a aplicação Node.js e MySQL. Foram adicionados o `Dockerfile` e o `docker-compose.yml` para criar e orquestrar os containers.
 
@@ -32,3 +37,6 @@ npx prisma migrate dev --name {nomeDoBanco}
 
 1. **Build e Start dos containers:**
    docker-compose up --build
+
+
+
